@@ -1,0 +1,20 @@
+<div class="main">
+  <div class="card-body">
+    <form>
+      <div>
+        <h3 class="login">WELCOME</h3>
+        <p>Please enter your credentials</p>
+      </div>
+      <hr>
+      <div class="mb-3">
+        <label for="email"  class="form-label">Email</label>
+        <input type="text" #email class="form-control" id="email" name="email" >
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" #password name="password" id="password" >
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="login(email.value,password.value)">Submit</button>
+    </form>
+  </div>
+</div>

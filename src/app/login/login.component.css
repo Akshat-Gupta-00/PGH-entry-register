@@ -1,0 +1,31 @@
+.main{
+    margin: 20% 150%;
+    width: 150%;
+    background-color: rgb(245, 212, 63);
+    border-radius: 8%;
+}
+.form-label{
+    font-style: bold;
+    font-size: 20px;
+}
+
+.login{
+    font-family: serif;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.btn{
+    font-size: 100%;
+    width: 30%;
+    height: 45px;
+    color: aliceblue;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.btn:hover{
+    scale: 1.03;
+    border: currentColor;
+    border-color: black;
+}

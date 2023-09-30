@@ -1,0 +1,24 @@
+.main{
+    height: 100%;
+    width: 650px;
+    padding: 5px 20px;
+    }
+    
+    .heading{
+        text-align: center;
+        font-size:xx-large
+    }
+.row{
+    margin:10px 0px;
+}
+    
+    
+select{
+    height: 60%;
+    width: 100%;
+    border: solid 1px rgba(114, 113, 113, 0.316);
+    border-radius: 5px;
+}
+    
+
+    

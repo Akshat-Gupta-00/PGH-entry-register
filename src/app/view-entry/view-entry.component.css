@@ -1,0 +1,17 @@
+.form{
+    float: left;
+    width: 400px;
+}
+.lable{
+    padding: 0 20px;
+}
+.form input{
+    height: 34px;
+
+}
+.form button{
+    margin-left: 10px;
+}
+table  tr{
+    text-align: center;
+}

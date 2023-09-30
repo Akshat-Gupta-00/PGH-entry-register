@@ -1,0 +1,95 @@
+
+<div class="main">
+    <div class="heading"><u>E N T R Y</u>&nbsp;&nbsp;<u>D E T A I L S</u></div>
+    <div class="body">
+        <form >    
+            <div class="row">
+                <div class="form-group col-md-6">
+                   <label for="Eno">Entry no.</label>
+                   <input [(ngModel)]="customer.Eno" type="number"  id="Eno" name="Eno" readonly class="form-control ">
+                </div>     
+                <div class="form-group col-md-6">
+                   <label for="Price">Price</label>
+                   <input [(ngModel)]="customer.Price" type="number" id="Price" name="Price" readonly class="form-control ">
+                </div>     
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                   <label for="name">Name *</label>
+                   <input type="text" id="name" name="name" [(ngModel)]="customer.Name" readonly class="form-control ">
+                </div> 
+                <div class="form-group col-md-6">
+                    <label for="fname">Son of *</label>
+                    <input type="text" id="fname" name="fname" [(ngModel)]="customer.fname" readonly class="form-control ">
+                 </div>    
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="Pos">Purpose of visit</label>
+                    <input type="text" id="pos" name="pos" [(ngModel)]="customer.Pos" readonly class="form-control ">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Nationality">Nationality</label>
+                    <input type="text" id="Nationality" name="Nationality" [(ngModel)]="customer.Nationality" readonly class="form-control ">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                   <label for="Address">Address</label>
+                   <input [(ngModel)]="customer.Address" type="text" id="Address" name="Address" readonly class="form-control ">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="room-no">Room no.</label>
+                    <input  [(ngModel)]="customer.room_no" type="text" id="room-no" name="room-no" readonly class="form-control ">
+                 </div>
+                 <div class="form-group col-md-6">
+                    <label for="nperson">No. of Person </label>
+                    <input  [(ngModel)]="customer.nperson" type="number" id="nperson" name="nperson" readonly class="form-control ">
+                 </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="Phone">Phone no.</label>
+                    <input  [(ngModel)]="customer.Phone" type="number" id="Phone" name="Phone" maxlength="10" minlength="10" readonly class="form-control ">
+                 </div>
+                 <div class="form-group col-md-6">
+                    <label for="nperson">Alt Phone no.</label>
+                    <input  [(ngModel)]="customer.alPhone" type="number" id="nperson" name="nperson" readonly class="form-control ">
+                 </div>     
+            </div> 
+            <div class="row">
+                <div class="form-group col-md-6">
+                   <label for="UID">UID</label>
+                   <input  [(ngModel)]="customer.UID" type="text" id="UID" name="UID" readonly class="form-control ">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Upuid">Upload UID</label>
+                    <input type="text" id="Upuid" name="Upuid" class="form-control ">
+                 </div>     
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                   <label for="Check-in">Check-in</label>
+                   <input  [(ngModel)]="customer.cin" type="date" id="Check-in" name="Check-in" readonly class="form-control ">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="Check-out">Check-out</label>
+                    <input [(ngModel)]="customer.cout" type="date" id="Check-out" name="Check-out" [readOnly]="this.check" class="form-control ">
+                 </div>     
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                <button *ngIf="!this.check2" class="btn btn-primary" (click)="addcheckout()">ADD Check-out</button>
+                <button *ngIf="this.check2" class="btn btn-primary"  (click)="updateRecord($event)">Save Update</button>
+                <button class="btn btn-primary" style="margin-left:.5vw"  (click)="deleteRecord($event,customer.id)">Delete Record</button>
+                       
+            </div>
+            </div>
+        </form>
+         
+    </div>
+  
+  </div>
+  

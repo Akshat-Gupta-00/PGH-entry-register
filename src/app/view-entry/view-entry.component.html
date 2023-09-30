@@ -1,0 +1,67 @@
+<div class="app-content pt-2 p-md-3 p-lg-4">
+    <div class="container-xl">
+        <div class="row g-2 mb-4 align-items-center justify-content-between">
+            <div class="col-auto">
+                <h1 class="app-page-title mb-0">Customers Entries</h1>
+            </div>
+            <form class="form" >
+                <label class="lable" for="name">Search</label>
+                <input name="name" id="name" placeholder="xxxxxxxxx" [(ngModel)]="this.searchvalue" >
+                <button (click)="openaddentry()" class="btn btn-primary"> Add Entry</button>
+          
+        </form>
+        </div><!--//row-->
+        <div class="card mb-4">
+            <div class="card-body">
+                
+                <div class="card-inner ">
+                    <div class="table-responsive" >
+                        
+                        <table class="table">
+                            <!--Table head-->
+                            <thead class="mdb-color" >
+                                <tr class="text-black">
+                                    <th>SR no.</th>
+                                    <th>Name</th>
+                                    <th>Check-in Date</th>
+                                    <th>Check-out Date</th>
+                                    <th>Room no</th>       
+                                    <th>Contact No.</th>
+                                    <th>Purpose of visit</th>
+                                    <th>Action</th>
+                
+                                </tr>
+                            </thead>
+                            <!--Table head-->
+                            <!--Table body-->
+                            
+                            
+                            <tbody *ngFor="let customer of customerList" >
+                                <tr *ngIf="this.searchvalue == '' || customer.Name.toLowerCase().includes(this.searchvalue|lowercase)" >
+                                    <td>{{customer.Eno}}</td>
+                                    <td >{{customer.Name | titlecase}}</td>
+                                    <td >{{customer.cin|date: 'dd/MM/yyyy'}}</td>
+                                    <td >{{customer.cout|date: 'dd/MM/yyyy'}}</td>
+                                    <td>  {{customer.room_no}}</td>
+                                    <td>{{customer.Phone}}</td>
+                                    <td>{{customer.Pos}}</td>
+                                    <td> <button class="btn btn-primary" (click)="popupopen(customer)">View</button>&nbsp;                                        
+                                     <button class="btn btn-primary" (click)="ReAddEntry(customer)">Add </button> </td>
+                                  
+                                    </tbody>
+                               
+                            <!--Table body-->
+                        </table>
+
+                
+                      
+                    </div>
+        
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div><!--//container-fluid-->
+</div><!--//app-content-->
+

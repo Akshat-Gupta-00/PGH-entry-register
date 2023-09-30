@@ -1,0 +1,17 @@
+.main{
+    background-color: rgb(245, 212, 63);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    z-index: 999;
+    position: fixed;
+}
+
+h1{
+    font-size: 40px;
+    font-family: serif  ;
+}
+
+h3{
+    font-size: 25px;
+}
